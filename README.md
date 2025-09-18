@@ -7,18 +7,18 @@ A modern, responsive Next.js 14 application for Zafron Advisors, a finance manag
 - **Modern Design**: Clean, professional UI with glassmorphic navigation and smooth animations
 - **GSAP Animations**: Engaging micro-interactions and page transitions
 - **Responsive**: Mobile-first design that works on all devices
-- **Contact Form**: Functional contact form with email notifications using Nodemailer
+- **Contact Form**: Functional contact form with success message display
 - **SEO Optimized**: Comprehensive metadata and structured data
 - **Performance**: Optimized for Core Web Vitals and fast loading
+- **Zero Dependencies**: No environment variables required for deployment
 
 ## 🛠 Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Styling**: TailwindCSS with custom animations
 - **Animations**: GSAP (GreenSock Animation Platform)
-- **Email**: Nodemailer with Gmail SMTP
 - **Language**: TypeScript
-- **Deployment**: Ready for Vercel/Netlify deployment
+- **Deployment**: Ready for instant deployment on any platform
 
 ## 📂 Project Structure
 
@@ -26,13 +26,10 @@ A modern, responsive Next.js 14 application for Zafron Advisors, a finance manag
 zafron-advisors/
 │
 ├── app/                    # Next.js App Router
-│   ├── api/
-│   │   └── contact/
-│   │       └── route.ts    # Contact form API endpoint
 │   ├── about/
 │   │   └── page.tsx        # About page
 │   ├── contact/
-│   │   └── page.tsx        # Contact page
+│   │   └── page.tsx        # Contact page with form
 │   ├── process/
 │   │   └── page.tsx        # Process page
 │   ├── globals.css         # Global styles
@@ -46,9 +43,7 @@ zafron-advisors/
 │   ├── ProcessStep.tsx     # Process step component
 │   ├── RefundPolicy.tsx    # Refund policy accordion
 │   └── ServiceCard.tsx     # Service card component
-│
-├── lib/
-│   └── mailer.ts           # Email configuration and templates
+```
 │
 ├── public/                 # Static assets
 ├── .env.example            # Environment variables template
@@ -87,7 +82,7 @@ zafron-advisors/
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/abdullah4143/zafron-advisors.git
    cd zafron-advisors
    ```
 
@@ -96,31 +91,21 @@ zafron-advisors/
    npm install
    ```
 
-3. **Set up environment variables:**
-   ```bash
-   cp .env.example .env.local
-   ```
-   
-   Fill in your email configuration:
-   ```env
-   GMAIL_USER=your-email@gmail.com
-   GMAIL_APP_PASSWORD=your-app-password
-   ```
-
-4. **Run the development server:**
+3. **Run the development server:**
    ```bash
    npm run dev
    ```
 
-5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser**
 
-## 📧 Email Configuration
+## 📧 Contact Form
 
-The contact form uses Gmail SMTP for sending emails. To set this up:
-
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an App Password: [Google Account Settings](https://myaccount.google.com/apppasswords)
-3. Add the credentials to your `.env.local` file
+The contact form provides a user-friendly interface that:
+- Validates all required fields
+- Shows loading animation during submission
+- Displays success message with contact information
+- Automatically resets after submission
+- No server-side dependencies required
 
 ## 🎨 Customization
 
@@ -156,16 +141,14 @@ Update company information in:
 ### Vercel (Recommended)
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically
+3. Deploy automatically - **No environment variables needed!**
 
-### Environment Variables for Production
-```env
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
-NEXTAUTH_URL=https://your-domain.com
-NEXTAUTH_SECRET=your-secret-key
-```
+### Other Platforms
+- **Netlify**: Connect GitHub repo and deploy
+- **Railway**: One-click deployment
+- **Render**: Automatic deployment from Git
+
+**Zero configuration required** - the app works out of the box!
 
 ## 📱 Responsive Design
 
