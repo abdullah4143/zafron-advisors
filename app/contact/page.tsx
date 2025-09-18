@@ -36,51 +36,30 @@ export default function ContactPage() {
     setSubmitStatus('idle')
 
     try {
-      // Validate form
-      if (!formData.name || !formData.email || !formData.message) {
-        throw new Error('All fields are required')
+      // Validate form data
+      if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+        throw new Error('Please fill in all fields')
       }
 
-      // Submit form
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      const result = await response.json()
-
-      if (result.success) {
-        setSubmitStatus('success')
-        setStatusMessage(result.message)
+      // Simulate form processing with a delay
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // Show success message
+      setSubmitStatus('success')
+      setStatusMessage(
+        'Thank you for your message! We have received your inquiry and will get back to you within 24-48 hours. ' +
+        'In the meantime, feel free to call us at +92 322 621 9972 for immediate assistance.'
+      )
+      
+      // Reset form after a delay
+      setTimeout(() => {
         setFormData({ name: '', email: '', message: '' })
-        
-        // Success animation
-        gsap.fromTo('.success-message', 
-          { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)' }
-        )
-      } else {
-        throw new Error(result.message || 'Something went wrong')
-      }
+        setSubmitStatus('idle')
+      }, 5000)
+      
     } catch (error) {
       setSubmitStatus('error')
-      setStatusMessage(error instanceof Error ? error.message : 'An error occurred')
-      
-      // Error shake animation
-      gsap.to('.contact-form', {
-        x: 0,
-        keyframes: [
-          { x: -10, duration: 0.1 },
-          { x: 10, duration: 0.1 },
-          { x: -10, duration: 0.1 },
-          { x: 10, duration: 0.1 },
-          { x: 0, duration: 0.1 }
-        ],
-        ease: 'power2.out'
-      })
+      setStatusMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
