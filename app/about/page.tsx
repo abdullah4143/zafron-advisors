@@ -73,7 +73,7 @@ export default function AboutPage() {
                     <p>
                       Zafron Advisors is a finance management company headquartered in Islamabad at 
                       G11 Markaz, Islamabad Arcade, 3rd Floor T11. We specialize in project management, 
-                      financial reporting, and the integration of finance software into business systems.
+                      Data Analytics, and the integration of finance software into business systems.
                     </p>
                     <p>
                       Our approach combines technical expertise with a client-first mindset, 

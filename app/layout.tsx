@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     default: 'Zafron Advisors - Empowering Businesses with Smarter Financial Management',
     template: '%s | Zafron Advisors'
   },
-  description: 'Streamline projects, reports, and integrations with Zafron Advisors. Located at G11 Markaz, Islamabad Arcade, 3rd Floor T11, Islamabad, Pakistan. We specialize in project management, financial reporting, and software integration.',
+  description: 'Streamline projects, reports, and integrations with Zafron Advisors. Located at G11 Markaz, Islamabad Arcade, 3rd Floor T11, Islamabad, Pakistan. We specialize in project management, data analytics, and software integration.',
   keywords: [
     'financial management',
     'project management',
-    'financial reports',
+    'Data Analytics',
     'software integration',
     'finance advisory',
     'Islamabad',

@@ -174,7 +174,7 @@ const RefundPolicy = () => {
             </p>
             <p className="text-blue-800 text-sm">
               We reserve the right to review each case individually to ensure fair treatment for all parties. 
-              All refund policies are subject to Pakistani financial regulations and our terms of service.
+              All refund policies are subject to our terms of service.
             </p>
           </div>
         </div>

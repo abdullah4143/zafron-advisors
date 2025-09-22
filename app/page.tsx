@@ -45,8 +45,8 @@ const HomePage = () => {
       icon: '📋'
     },
     {
-      title: 'Financial Reports',
-      description: 'Accurate and actionable reports for smarter decision-making. Get insights that drive your business forward.',
+      title: 'Data Analytics',
+      description: 'Accurate and actionable analysis for smarter decision-making. Get insights that drive your business forward.',
       icon: '📊'
     },
     {
@@ -88,7 +88,7 @@ const HomePage = () => {
             </div>
             <div className="flex justify-center items-center space-x-8 opacity-70">
               <div className="text-4xl transform hover:scale-110 transition-transform duration-300" title="Project Management">📋</div>
-              <div className="text-4xl transform hover:scale-110 transition-transform duration-300" title="Financial Reports">📊</div>
+              <div className="text-4xl transform hover:scale-110 transition-transform duration-300" title="Data Analytics">📊</div>
               <div className="text-4xl transform hover:scale-110 transition-transform duration-300" title="System Integration">🔗</div>
               <div className="text-4xl transform hover:scale-110 transition-transform duration-300" title="Strategic Partnerships">🤝</div>
             </div>
